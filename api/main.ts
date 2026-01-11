@@ -1,5 +1,6 @@
 import app from './src/app';
 import { ApiConfig } from './src/shared/config/index';
+import 'reflect-metadata';
 
 const PORT = ApiConfig.port || 3000;
 
