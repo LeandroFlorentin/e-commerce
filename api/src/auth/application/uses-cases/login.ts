@@ -19,7 +19,7 @@ export class LoginUseCase {
       return this.jwtRepository.generateToken(cacheUser);
     }
     const isUserExist = { id: 1, email: 'test@test.com', username: 'test', role: ['user'], password: '123456' }; //await this.userRepository.findByEmailOrUsername(email);
-    if (!isUserExist) throw new AppError('User not found', 404);
+    if (!isUserExist) throw new AppError('Incorrect username', 404);
     const isPasswordValid = await this.encryptRepository.comparePassword(password, isUserExist.password);
     if (!isPasswordValid) throw new AppError('Invalid password', 401);
     const token = this.jwtRepository.generateToken(isUserExist);

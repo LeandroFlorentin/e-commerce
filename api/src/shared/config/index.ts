@@ -1,2 +1,2 @@
-export { default as PostgresConfig } from './postgres.config';
-export { default as ApiConfig } from './api.config';
+export { ApiConfig, DBConfig } from './env';
+export { swaggerSpec } from './libs';

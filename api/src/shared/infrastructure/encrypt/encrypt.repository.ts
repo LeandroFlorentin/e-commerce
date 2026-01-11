@@ -1,7 +1,7 @@
 import { hash, compare } from 'bcrypt';
 import { EncryptRepositoryInterface } from '@/src/shared/domain/repositories/encrypt.repository.interface';
 
-export default class EncryptRepository implements EncryptRepositoryInterface {
+export class EncryptRepository implements EncryptRepositoryInterface {
   async hashPassword(password: string): Promise<string> {
     return hash(password, 10);
   }
