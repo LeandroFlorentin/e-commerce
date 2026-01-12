@@ -2,5 +2,5 @@
   "watch": ["src", "main.ts"],
   "ext": ".ts,.js",
   "ignore": ["node_modules", "dist"],
-  "exec": "dotenv -e ../infra/env/api/.env.dev -e ../infra/env/db/postgres/.env.dev -e ../infra/env/jwt/.env.dev -- npx ts-node -r tsconfig-paths/register -r dotenv/config main.ts"
+  "exec": "dotenv -e ../infra/env/api/.env.dev -e ../infra/env/db/postgres/.env.dev -e ../infra/env/jwt/.env.dev -e ../infra/env/db/redis/.env.dev -- npx ts-node -r tsconfig-paths/register -r dotenv/config main.ts"
 }

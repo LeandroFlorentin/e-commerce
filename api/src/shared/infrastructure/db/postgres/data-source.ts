@@ -1,6 +1,6 @@
 import 'reflect-metadata';
 import { DataSource } from 'typeorm';
-import { UserEntity } from '../../../users/infrastructure/db/models';
+import { UserEntity } from '../../../../users/infrastructure/db/models';
 import { DBConfig } from '@/src/shared/config/env';
 
 const { host, port, user, password, db_name, type } = DBConfig;

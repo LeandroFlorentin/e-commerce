@@ -1,5 +1,4 @@
-import { TokenRepositoryInterface } from '@/src/shared/domain/repositories/token.repository.interface';
-import { EncryptRepositoryInterface } from '@/src/shared/domain/repositories/encrypt.repository.interface';
+import { TokenRepositoryInterface, EncryptRepositoryInterface, CacheRepositoryInterface } from '@/src/shared/domain/repositories';
 import { AuthDTO } from '@/src/auth/interface/dtos/auth.dto';
 import { AppError } from '@/src/shared/utils';
 
@@ -7,6 +6,7 @@ export class LoginUseCase {
   constructor(
     private readonly jwtRepository: TokenRepositoryInterface,
     private readonly encryptRepository: EncryptRepositoryInterface,
+    private readonly cacheRepository: CacheRepositoryInterface,
   ) {
     this.jwtRepository = jwtRepository;
     this.encryptRepository = encryptRepository;
